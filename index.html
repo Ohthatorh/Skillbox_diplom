@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/justValidateTooltip.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/hamburgers.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Дмитрий Алексеев - веб-верстальщик</title>
+</head>
+<body>
+    <div class="popup-overlay"></div>
+    <div class="popup">
+        <span class="popup-close">&times;</span>
+            <h2 class="popup__subtitle">
+                Оставить заявку
+            </h2>
+            <form action="https://jsonplaceholder.typicode.com/posts" class="popup__form js-form" method="POST">
+                <div class="just-validate-tooltip-container">
+                <label class="form__label">
+                    Как вас зовут?
+                    <input class="form__input form__name" name="name" type="text" placeholder="Имя*" data-validate-field="name">
+                </label>
+            </div>
+            <div class="just-validate-tooltip-container">
+                <label class="form__label">
+                    Укажите ваш телефон
+                        <input id="tel" class="form__input form__tel" name="tel" type="tel" placeholder="Телефон*" data-validate-field="tel" data-validate-rules="phone">
+                    </label>
+                </div>
+                <div class="just-validate-tooltip-container">              
+                <label class="form__label">
+                    Укажите ваш e-mail
+                        <input class="form__input form__email" name="email" type="email" placeholder="Email*" data-validate-field="mail">
+                    </label>
+                </div>
+                <button class="form__button button button_orange">Оставить заявку</button>
+            </form>
+    </div>
+    <header class="header fixed-container">
+        <button class="hamburger hamburger--vortex" type="button">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        <menu class="menu__list"> 
+            <li class="menu__item">
+                <a href="#" class="menu__link">Услуги</a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link">Портфолио</a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link">Стоимость</a>
+            </li>
+        </menu>
+        <a href="tel:84999955577" class="phone phone_left-auto phone_bold" aria-label="Мой номер телефона +74999955577">+7 (499) 995-55-77</a>
+        <button class="header__button button button_white">Заказать звонок</button>
+        <button class="header__button-mobile" aria-label="Поиск по сайту"></button>
+    </header>
+    <main class="main">
+        <section class="main__nav">
+            <h2 class="visually-hidden">Основное меню</h2>
+            <ul class="main__list">
+                <li class="main__item">
+                    <a href="#" class="main__link">Услуги</a>
+                </li>
+                <li class="main__item">
+                    <a href="#" class="main__link">Портфолио</a>
+                </li>
+                <li class="main__item">
+                    <a href="#" class="main__link">Стоимость</a>
+                </li>
+            </ul>
+        </section>
+        <section class="about">
+            <div class="symbols">
+                <div class="symbols__main symbols__main_brackets symbols__main_active">{ }</div>
+                <div class="symbols__main symbols__main_div symbols__main_active">&#60;div&#62;</div>
+                <div class="symbols__main symbols__main_slashtablet symbols__main_active">&#60;/&#62;</div>
+                <div class="symbols__main symbols__main_grid symbols__main_active">#</div>
+                <div class="symbols__main symbols__main_divbottom symbols__main_active">&#60;div&#62;</div>
+                <div class="symbols__main symbols__main_slash symbols__main_active">&#60;/&#62;</div>
+            </div>  
+            <div class="fixed-container about__content">
+                <div class="about__description">
+                    <h1 class="about__title">
+                        Дмитрий Алексеев
+                    </h1>
+                    <p class="about__text">
+                        Frontend-разработчик и веб-верстальщик
+                    </p>
+                    <button class="button about__button button_orange">
+                        Узнать больше
+                    </button>
+                </div>
+                <img src="/img/man.png" alt="Дмитрий Алексеев - web разработчик" class="about__person">
+            </div>
+            <picture>
+                <source media="(max-width:685px)" srcset="/img/ellipse-mob.png">
+                <source media="(max-width:1366px)" srcset="/img/ellipse-tablet.png">
+                <img src="/img/ellipse.svg" alt="ellipse" class="about__svg" aria-hidden="true">
+            </picture>
+        </section>
+        <section class="services fixed-container">
+            <h2 class="subtitle services__subtitle">
+                Что я делаю
+            </h2>
+            <ul class="services__list">
+                <li class="services__item">Вёрстка лендинг-страниц и сайтов любой сложности</li>
+                <li class="services__item">Адаптивная вёрстка под все  браузеры и устройства</li>
+                <li class="services__item">Frontend-разработка и программирование</li>
+                <li class="services__item">Исправление и доработка существующей вёрстки</li>
+            </ul>
+            <button class="services__button button button_orange">
+                Узнать стоимость
+            </button>
+        </section>
+        <section class="portfolio">
+            <div class="fixed-container">
+                <h2 class="subtitle portfolio__subtitle">
+                    Примеры моих работ
+                </h2>
+                <div class="swiper swiper-container">
+                    <ul class="portfolio__list swiper-wrapper">
+                        <li class="portfolio__item swiper-slide">
+                            <img src="img/hypnotherapy.png" alt="Сайт психолога" class="portfolio__img">
+                            <p class="portfolio__text">Сайт психолога Веры Антоновой</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="img/child.png" alt="Сайт детской одежды" class="portfolio__img">
+                            <p class="portfolio__text">Сайт магазина детской одежды</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="img/fish.png" alt="Сайт рыболов" class="portfolio__img">
+                            <p class="portfolio__text">Сайт магазина "Рыболов"</p>
+                        </li>
+                    </ul>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <button class="portfolio__button button button_orange">Заказать проект</button>
+            </div>
+        </section>
+        <section class="price">
+            <div class="symbols">
+                <div class="symbols__price symbols__price_white symbols__price_brackets">{ }</div>
+                <div class="symbols__price symbols__price_white symbols__price_slash">&#60;/&#62;</div>
+                <div class="symbols__price symbols__price_white symbols__price_grid">#</div>
+                <div class="symbols__price symbols__price_white symbols__price_div">&#60;div&#62;</div>
+                <div class="symbols__price symbols__price_white symbols__price_bracketsbottom">{ }</div>
+            </div>
+            <div class="fixed-container">
+                <h2 class="price__subtitle">
+                    Адаптивная вёрстка под все устройства и браузеры от 1000 рублей всего за 4 часа.*
+                </h2>
+                <p class="price__text">
+                    * Срок и стоимость могут отличаться от заявленных и рассчитываются  индивидуально, в зависимости от сложности задач.
+                </p>
+            </div>
+        </section>    
+    </main>
+    <footer class="footer">
+        <div class="fixed-container">
+            <div class="footer__blocks">
+                <ul class="footer__menu">
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Услуги</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Портфолио</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Стоимость</a>
+                    </li>
+                </ul>
+                <div class="footer__contacts">
+                    <a aria-label="Мой номер телефона +74999955577" href="tel:84999955577" class="phone phone_bottom">
+                        <i class="fas fa-phone"></i>+7 (499) 995-55-77
+                    </a>
+                    <a aria-label="Мой почтовый ящик dmitry@alekseev.com" href="mailto:dmitry@alekseev.com" class="email">
+                        <i class="fas fa-envelope"></i>
+                        dmitry@alekseev.com
+                    </a>
+                </div>
+                <div class="social">
+                    <button class="footer__button button button_white">Заказать звонок</button>
+                    <ul class="social__list">
+                        <li class="social__item">
+                            <a aria-label="Страница в ВК" href="#" class="social__link vk"></a>
+                        </li>
+                        <li class="social__item">
+                            <a aria-label="Страница в ФБ" href="#" class="social__link facebook"></a>
+                        </li>
+                        <li class="social__item">
+                            <a aria-label="Страница в Твиттере" href="#" class="social__link twitter"></a>
+                        </li>
+                        <li class="social__item">
+                            <a aria-label="Страница в Инстаграм" href="#" class="social__link instagram"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="rights">
+            <p class="rights__text">&copy; Дмитрий Алексеев, 2020</p>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/d96b1db68b.js" crossorigin="anonymous"></script>
+    <script src="js/just-validate.min.js"></script>
+    <script src="js/inputmask.min.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
