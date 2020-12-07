@@ -2,7 +2,7 @@ $(document).ready(function() {
 	$(window).resize(function() {
 		if(document.documentElement.clientWidth > 1170) {
 			$('.hamburger--vortex').removeClass('is-active');
-			$('.main__nav').removeClass('main__nav-active');
+			$('.main__menu').removeClass('main__menu-active');
 			$('body').removeClass('disable-scroll');
 		}
 	});
@@ -12,7 +12,7 @@ $(document).ready(function() {
 	$('.hamburger--vortex').click(function() {
 		$(this).toggleClass('is-active');
 		$('body').toggleClass('disable-scroll');
-		$('.main__nav').toggleClass('main__nav-active');
+		$('.main__menu').toggleClass('main__menu-active');
 	});
 
 	$('.button, .header__button-mobile').click(function(){
@@ -20,7 +20,7 @@ $(document).ready(function() {
 		$('.popup').css('display', 'flex').hide().fadeIn();
 	});
 
-	$('.popup-close, .popup-overlay').click(function(){
+	$('.popup__close, .popup-overlay').click(function(){
 		$('.popup-overlay').fadeOut();
 		$('.popup').fadeOut();
 	});
