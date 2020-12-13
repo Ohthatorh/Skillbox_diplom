@@ -186,15 +186,15 @@ a {
     padding: 0;    
 }
 
-.menu__item:not(:last-child) {
+.header__item:not(:last-child) {
     margin-right: 32px;
 }
 
-.menu__item {
+.header__item {
     position: relative;
 }
 
-.menu__item::after {
+.header__item::after {
     display: block;
     content: '';
     background-color: var(--pink-color);
@@ -210,8 +210,8 @@ a {
             transform: translateX(-50%);
 }
 
-.menu__item:hover:after,
-.menu__item:focus:after {
+.header__item:hover:after,
+.header__item:focus:after {
     width: 100%;
 }
 
