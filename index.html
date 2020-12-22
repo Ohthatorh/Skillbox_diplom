@@ -14,17 +14,19 @@
     <div class="popup-overlay"></div>
     <div class="popup">
         <span class="popup__close">&times;</span>
-            <h2 class="popup__subtitle">
+            <h2 class="popup__subtitle text-reset">
                 Оставить заявку
             </h2>
-            <form action="https://jsonplaceholder.typicode.com/posts" class="popup__form js-form" method="POST">
+            <form action="mail.php" enctype="multipart/form-data" class="popup__form js-form" method="POST">
+                <input class="visually-hidden" type="hidden" name="admin_email[]" value="ohthatorh@yandex.ru">
+                <input class="visually-hidden" type="hidden" name="form_subject" value="Заказ">
                 <div class="just-validate-tooltip-container">
                 <label class="form__label">
                     Как вас зовут?
                     <input class="form__input form__name" name="name" type="text" placeholder="Имя*" data-validate-field="name">
                 </label>
-            </div>
-            <div class="just-validate-tooltip-container">
+                </div>
+                <div class="just-validate-tooltip-container">
                 <label class="form__label">
                     Укажите ваш телефон
                         <input id="tel" class="form__input form__tel" name="tel" type="tel" placeholder="Телефон*" data-validate-field="tel" data-validate-rules="phone">
@@ -45,32 +47,32 @@
                 <span class="hamburger-inner"></span>
             </span>
         </button>
-        <menu class="header__menu"> 
-            <li class="header__item">
+        <!-- <menu class="header__menu"> 
+            <li class="header__item list-reset">
                 <a href="#services" class="header__link scroll-to">Услуги</a>
             </li>
-            <li class="header__item">
+            <li class="header__item list-reset">
                 <a href="#portfolio" class="header__link scroll-to">Портфолио</a>
             </li>
-            <li class="header__item">
+            <li class="header__item list-reset">
                 <a href="#price" class="header__link scroll-to">Стоимость</a>
             </li>
-        </menu>
+        </menu> -->
         <a href="tel:84999955577" class="header__phone phone phone_left-auto" aria-label="Мой номер телефона +74999955577">+7 (499) 995-55-77</a>
         <button class="header__button button button_white button-js">Заказать звонок</button>
         <button class="header__button-mobile button-js" aria-label="Поиск по сайту"></button>
     </header>
     <main class="main">
         <section class="main__menu">
-            <h2 class="visually-hidden">Основное меню</h2>
-            <ul class="main__list">
-                <li class="main__item">
+            <h2 class="visually-hidden text-reset">Основное меню</h2>
+            <ul class="main__list list-reset">
+                <li class="main__item list-reset">
                     <a href="#services" class="main__link scroll-to">Услуги</a>
                 </li>
-                <li class="main__item">
+                <li class="main__item list-reset">
                     <a href="#portfolio" class="main__link scroll-to">Портфолио</a>
                 </li>
-                <li class="main__item">
+                <li class="main__item list-reset">
                     <a href="#price" class="main__link scroll-to">Стоимость</a>
                 </li>
             </ul>
@@ -86,7 +88,7 @@
             </div>  
             <div class="fixed-container about__content">
                 <div class="about__description">
-                    <h1 class="about__title">
+                    <h1 class="about__title text-reset">
                         Дмитрий Алексеев
                     </h1>
                     <p class="about__text">
@@ -106,14 +108,14 @@
         </section>
         <section id="services" class="services">
             <div class="fixed-container">
-                <h2 class="subtitle services__subtitle">
+                <h2 class="subtitle services__subtitle text-reset">
                     Что я делаю
                 </h2>
-                <ul class="services__list">
-                    <li class="services__item">Вёрстка лендинг-страниц и сайтов любой сложности</li>
-                    <li class="services__item">Адаптивная вёрстка под все  браузеры и устройства</li>
-                    <li class="services__item">Frontend-разработка и программирование</li>
-                    <li class="services__item">Исправление и доработка существующей вёрстки</li>
+                <ul class="services__list list-reset">
+                    <li class="services__item list-reset">Вёрстка лендинг-страниц и сайтов любой сложности</li>
+                    <li class="services__item list-reset">Адаптивная вёрстка под все  браузеры и устройства</li>
+                    <li class="services__item list-reset">Frontend-разработка и программирование</li>
+                    <li class="services__item list-reset">Исправление и доработка существующей вёрстки</li>
                 </ul>
                 <button class="services__button button button_orange button-js">
                     Узнать стоимость
@@ -121,29 +123,29 @@
             </div>
         </section>
         <section id="portfolio" class="portfolio">
-            <div class="fixed-container">
-                <h2 class="subtitle portfolio__subtitle">
-                    Примеры моих работ
-                </h2>
-                <div class="swiper swiper-container">
-                    <ul class="portfolio__list swiper-wrapper">
-                        <li class="portfolio__item swiper-slide">
-                            <img src="img/hypnotherapy.png" alt="Сайт психолога" class="portfolio__img">
-                            <p class="portfolio__text">Сайт психолога Веры Антоновой</p>
-                        </li>
-                        <li class="portfolio__item swiper-slide">
-                            <img src="img/child.png" alt="Сайт детской одежды" class="portfolio__img">
-                            <p class="portfolio__text">Сайт магазина детской одежды</p>
-                        </li>
-                        <li class="portfolio__item swiper-slide">
-                            <img src="img/fish.png" alt="Сайт рыболов" class="portfolio__img">
-                            <p class="portfolio__text">Сайт магазина "Рыболов"</p>
-                        </li>
-                    </ul>
-                    <div class="swiper-pagination"></div>
+                <div class="fixed-container">
+                    <h2 class="subtitle portfolio__subtitle text-reset">
+                        Примеры моих работ
+                    </h2>
+                    <div class="swiper swiper-container">
+                        <div class="portfolio__list swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="img/hypnotherapy.png" alt="Сайт психолога" class="portfolio__img">
+                                <p class="portfolio__text">Сайт психолога Веры Антоновой</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/child.png" alt="Сайт детской одежды" class="portfolio__img">
+                                <p class="portfolio__text">Сайт магазина детской одежды</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/fish.png" alt="Сайт рыболов" class="portfolio__img">
+                                <p class="portfolio__text">Сайт магазина "Рыболов"</p>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <button class="portfolio__button button button_orange button-js">Заказать проект</button>
                 </div>
-                <button class="portfolio__button button button_orange button-js">Заказать проект</button>
-            </div>
         </section>
         <section id="price" class="price">
             <div class="symbols">
@@ -154,7 +156,7 @@
                 <div class="symbols__price symbols__price_white symbols__price_bracketsbottom">{ }</div>
             </div>
             <div class="fixed-container">
-                <h2 class="price__subtitle">
+                <h2 class="price__subtitle text-reset">
                     Адаптивная вёрстка под все устройства и браузеры от 1000 рублей всего за 4 часа.*
                 </h2>
                 <p class="price__text">
@@ -166,15 +168,15 @@
     <footer class="footer">
         <div class="fixed-container">
             <div class="footer__blocks">
-                <ul class="footer__menu">
-                    <li class="footer__item">
-                        <a href="#" class="footer__link">Услуги</a>
+                <ul class="footer__menu list-reset">
+                    <li class="footer__item list-reset">
+                        <a href="#services" class="footer__link scroll-to">Услуги</a>
                     </li>
-                    <li class="footer__item">
-                        <a href="#" class="footer__link">Портфолио</a>
+                    <li class="footer__item list-reset">
+                        <a href="#portfolio" class="footer__link scroll-to">Портфолио</a>
                     </li>
-                    <li class="footer__item">
-                        <a href="#" class="footer__link">Стоимость</a>
+                    <li class="footer__item list-reset">
+                        <a href="#price" class="footer__link scroll-to">Стоимость</a>
                     </li>
                 </ul>
                 <div class="footer__contacts">
@@ -188,17 +190,17 @@
                 </div>
                 <div class="social">
                     <button class="footer__button button button_white button-js">Заказать звонок</button>
-                    <ul class="social__list">
-                        <li class="social__item">
+                    <ul class="social__list list-reset">
+                        <li class="social__item list-reset">
                             <a aria-label="Страница в Вконтакте" href="https://vk.com/" target="_blank" class="social__link vk"></a>
                         </li>
-                        <li class="social__item">
+                        <li class="social__item list-reset">
                             <a aria-label="Страница в Фейсбуке" href="https://facebook.com/" target="_blank" class="social__link facebook"></a>
                         </li>
-                        <li class="social__item">
+                        <li class="social__item list-reset">
                             <a aria-label="Страница в Твиттере" href="https://twitter.com/" target="_blank" class="social__link twitter"></a>
                         </li>
-                        <li class="social__item">
+                        <li class="social__item list-reset">
                             <a aria-label="Страница в Инстаграм" href="https://instagram.com/" target="_blank" class="social__link instagram"></a>
                         </li>
                     </ul>

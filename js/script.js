@@ -25,7 +25,7 @@ $(document).ready(function() {
 		$('.popup').fadeOut();
 	});
 
-	$("a.scroll-to").on("click", function(e){
+	$('a.scroll-to').on('click', function(e){
 		e.preventDefault();
 		$('.hamburger--vortex').removeClass('is-active');
 		$('body').removeClass('disable-scroll');
