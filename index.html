@@ -18,8 +18,8 @@
                 Оставить заявку
             </h2>
             <form action="mail.php" enctype="multipart/form-data" class="popup__form js-form" method="POST">
-                <input class="visually-hidden" type="hidden" name="admin_email[]" value="ohthatorh@yandex.ru">
-                <input class="visually-hidden" type="hidden" name="form_subject" value="Заказ">
+                <input class="visually-hidden" name="admin_email[]" value="ohthatorh@yandex.ru">
+                <input class="visually-hidden" name="form_subject" value="Заказ">
                 <div class="just-validate-tooltip-container">
                 <label class="form__label">
                     Как вас зовут?
@@ -123,29 +123,31 @@
             </div>
         </section>
         <section id="portfolio" class="portfolio">
-                <div class="fixed-container">
-                    <h2 class="subtitle portfolio__subtitle text-reset">
-                        Примеры моих работ
-                    </h2>
-                    <div class="swiper swiper-container">
-                        <div class="portfolio__list swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="img/hypnotherapy.png" alt="Сайт психолога" class="portfolio__img">
-                                <p class="portfolio__text">Сайт психолога Веры Антоновой</p>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/child.png" alt="Сайт детской одежды" class="portfolio__img">
-                                <p class="portfolio__text">Сайт магазина детской одежды</p>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/fish.png" alt="Сайт рыболов" class="portfolio__img">
-                                <p class="portfolio__text">Сайт магазина "Рыболов"</p>
-                            </div>
+            <div class="fixed-container">
+                <h2 class="subtitle portfolio__subtitle text-reset">
+                    Примеры моих работ
+                </h2>
+                <img class="arrow arrow-prev" src="img/arrow.png" alt="Стрелка назад">
+                <img class="arrow arrow-next" src="img/arrow.png" alt="Стрелка вперед">
+                <div class="swiper swiper-container">
+                    <div class="portfolio__list swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="img/hypnotherapy.png" alt="Сайт психолога" class="portfolio__img">
+                            <p class="portfolio__text">Сайт психолога Веры Антоновой</p>
                         </div>
-                        <div class="swiper-pagination"></div>
+                        <div class="swiper-slide">
+                            <img src="img/child.png" alt="Сайт детской одежды" class="portfolio__img">
+                            <p class="portfolio__text">Сайт магазина детской одежды</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/fish.png" alt="Сайт рыболов" class="portfolio__img">
+                            <p class="portfolio__text">Сайт магазина "Рыболов"</p>
+                        </div>
                     </div>
-                    <button class="portfolio__button button button_orange button-js">Заказать проект</button>
+                    <div class="swiper-pagination"></div>
                 </div>
+                <button class="portfolio__button button button_orange button-js">Заказать проект</button>
+            </div>
         </section>
         <section id="price" class="price">
             <div class="symbols">

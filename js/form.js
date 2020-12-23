@@ -45,9 +45,18 @@ new JustValidate('.js-form', {
         let formData = new FormData(form);
         let xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4) {
-                if (xhr.status === 200) {
-                    alert('Отправлено!');
+            if (xhr.readyState !== 4) {
+                if (xhr.status !== 200) {
+                    document.querySelector('.popup__subtitle').textContent = 'Отправлено!';
+                    form.classList.add('visually-hidden');
+                    setTimeout(function(){
+                        document.querySelector('.popup-overlay').click();
+                    }, 2000);
+
+                    setTimeout(function(){
+                        form.classList.remove('visually-hidden');
+                        document.querySelector('.popup__subtitle').textContent = 'Оставить заявку';
+                    }, 3000);
                 }
             }
         }

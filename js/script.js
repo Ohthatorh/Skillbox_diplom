@@ -17,12 +17,14 @@ $(document).ready(function() {
 
 	$('.button-js').click(function(){
 		$('.popup-overlay').fadeIn();
+		$('body').addClass('disable-scroll');
 		$('.popup').css('display', 'flex').hide().fadeIn();
 	});
 
 	$('.popup__close, .popup-overlay').click(function(){
 		$('.popup-overlay').fadeOut();
 		$('.popup').fadeOut();
+		$('body').removeClass('disable-scroll');
 	});
 
 	$('a.scroll-to').on('click', function(e){

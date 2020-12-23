@@ -5,7 +5,7 @@ var mySwiper = new Swiper('.swiper-container', {
     },
     loop: true,
     breakpoints: {
-      1025: {
+      941: {
         slidesPerView: 3,
       },
   
@@ -16,5 +16,9 @@ var mySwiper = new Swiper('.swiper-container', {
       320: {
         slidesPerView: 1,
       }
+    },
+    navigation: {
+      nextEl: '.arrow-next',
+      prevEl: '.arrow-prev',
     }
 });
