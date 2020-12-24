@@ -2,7 +2,7 @@ $(document).ready(function() {
 	$(window).resize(function() {
 		if(document.documentElement.clientWidth > 1170) {
 			$('.hamburger--vortex').removeClass('is-active');
-			$('.main__menu').removeClass('main__menu-active');
+			$('.header__nav').removeClass('header__nav-active');
 			$('body').removeClass('disable-scroll');
 		}
 	});
@@ -12,7 +12,7 @@ $(document).ready(function() {
 	$('.hamburger--vortex').click(function() {
 		$(this).toggleClass('is-active');
 		$('body').toggleClass('disable-scroll');
-		$('.main__menu').toggleClass('main__menu-active');
+		$('.header__nav').toggleClass('header__nav-active');
 	});
 
 	$('.button-js').click(function(){
@@ -31,7 +31,7 @@ $(document).ready(function() {
 		e.preventDefault();
 		$('.hamburger--vortex').removeClass('is-active');
 		$('body').removeClass('disable-scroll');
-		$('.main__menu').removeClass('main__menu-active');
+		$('.header__nav').removeClass('header__nav-active');
 		let anchor = $(this).attr('href');
 		$('html, body').stop().animate({
 			scrollTop: $(anchor).offset().top
