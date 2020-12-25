@@ -6,6 +6,13 @@ $(document).ready(function() {
 			$('body').removeClass('disable-scroll');
 		}
 	});
+
+	let disableScroll = function () {
+		let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
+		console.log(paddingOffset)
+		$('body').css('padding-right', paddingOffset);
+		
+	}
 	
 	$('.symbols__main').removeClass('symbols__main_active');
 	
@@ -19,6 +26,7 @@ $(document).ready(function() {
 		$('.popup-overlay').fadeIn();
 		$('body').addClass('disable-scroll');
 		$('.popup').css('display', 'flex').hide().fadeIn();
+		disableScroll();
 	});
 
 	$('.popup__close, .popup-overlay').click(function(){
