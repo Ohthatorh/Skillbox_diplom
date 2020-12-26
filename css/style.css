@@ -718,7 +718,8 @@ a {
 
 .js-validate-error-label {
     top: 0;
-    font-size: 12px;
+    font-size: 10px;
+    background: rgba(0,0,0,.8);
 }
 
 .about__svg {
