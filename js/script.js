@@ -10,17 +10,17 @@ $(document).ready(function() {
 	$('.symbols__main').removeClass('symbols__main_active');
 
 	let disableScroll = () => {
-		let paddingOffset = $(window).innerWidth() - $('body').outerWidth() + 'px';
-		let pagePosition = window.scrollY;
-		$('body').css({'padding-right': paddingOffset, 'top': -pagePosition+'px'});
+		let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
+		let pagePosition = $(window).scrollTop();
+		$('body').css({'padding-right': paddingOffset, 'top': -window.scrollY+'px'});
 		$('.fixed').css('padding-right', paddingOffset);
 		$('body').addClass('disable-scroll');
-		document.body.dataset.position = pagePosition;
+		$('body').attr('data-position', pagePosition);
 	}
 
 	let enableScroll = () => {
 		let paddingOffset = '0px';
-		let pagePosition = parseInt(document.body.dataset.position, 10);
+		let pagePosition = parseInt($('body').attr('data-position', 10));
 		$('body').css({'padding-right': paddingOffset, 'top': 'auto'});
 		$('.fixed').css('padding-right', paddingOffset);
 		$('body').removeClass('disable-scroll');
