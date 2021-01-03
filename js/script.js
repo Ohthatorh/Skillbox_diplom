@@ -8,11 +8,10 @@ $(document).ready(function() {
 	});
 
 	$('.symbols__main').removeClass('symbols__main_active');
-
 	let disableScroll = () => {
-		let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
+		let paddingOffset = $(window).outerWidth() - $('body').outerWidth() + 'px';
 		let pagePosition = $(window).scrollTop();
-		$('body').css({'padding-right': paddingOffset, 'top': -window.scrollY+'px'});
+		$('body').css({'padding-right': paddingOffset, 'top': -pagePosition+'px'});
 		$('.fixed').css('padding-right', paddingOffset);
 		$('body').addClass('disable-scroll');
 		$('body').attr('data-position', pagePosition);
@@ -20,7 +19,7 @@ $(document).ready(function() {
 
 	let enableScroll = () => {
 		let paddingOffset = '0px';
-		let pagePosition = parseInt($('body').attr('data-position', 10));
+		let pagePosition = parseInt($('body').attr('data-position'));
 		$('body').css({'padding-right': paddingOffset, 'top': 'auto'});
 		$('.fixed').css('padding-right', paddingOffset);
 		$('body').removeClass('disable-scroll');
@@ -44,14 +43,15 @@ $(document).ready(function() {
 	$('.popup__close, .popup-overlay').click(function(){
 		$('.popup-overlay').fadeOut();
 		$('.popup').fadeOut();
-		setTimeout(enableScroll, 800);
+		enableScroll();
+		// setTimeout(enableScroll, 800);
 	});
 
 	$('a.scroll-to').on('click', function(e){
 		let anchor = $(this).attr('href');
 		e.preventDefault();
-		$('.hamburger--vortex').removeClass('is-active');
 		enableScroll();
+		$('.hamburger--vortex').removeClass('is-active');
 		$('.header__nav').removeClass('header__nav-active');
 		$('html, body').stop().animate({
 			scrollTop: $(anchor).offset().top

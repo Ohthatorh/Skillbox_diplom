@@ -658,8 +658,8 @@ a {
     z-index: 7;
     position: fixed;
     display: none;
-    width: 30%;
-    height: 50%;
+    width: 500px;
+    height: 400px;
     top: 0;
     left: 0;
     right: 0;
@@ -692,7 +692,7 @@ a {
 }
 
 .popup__subtitle {
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
 .form__label {
@@ -1186,7 +1186,8 @@ a {
     }
 
     .popup {
-        width: 50%;
+        height: 350px;
+        width: 300px;
     }
 
     .footer__menu {
@@ -1528,7 +1529,8 @@ a {
     }
 
     .popup {
-        height: 50%;
+        height: 300px;
+        width: 220px;
     }
 
     .popup__subtitle {
@@ -1536,6 +1538,10 @@ a {
     }
 
     .popup__form {
+        font-size: 10px;
+    }
+
+    .form__button {
         font-size: 10px;
     }
 }
