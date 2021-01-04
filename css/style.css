@@ -685,7 +685,7 @@ a {
 }
 
 .popup__subtitle {
-    margin: 20px 0;
+    margin: 0 0 20px 0;
 }
 
 .form__label {
@@ -701,13 +701,13 @@ a {
 
 .form__input {
     margin-top: 10px;
-    padding: 10px 20px;
+    padding: 15px 20px;
     border: none;
     border-radius: 10px;
 }
 
 .form__button {
-    padding: 10px 20px;
+    padding: 15px 30px;
 }
 
 .js-validate-error-label {
@@ -1179,8 +1179,8 @@ a {
     }
 
     .popup {
-        height: 350px;
-        width: 300px;
+        height: 400px;
+        width: 350px;
     }
 
     .footer__menu {
@@ -1522,8 +1522,8 @@ a {
     }
 
     .popup {
-        height: 300px;
-        width: 220px;
+        height: 320px;
+        width: 240px;
     }
 
     .popup__subtitle {
