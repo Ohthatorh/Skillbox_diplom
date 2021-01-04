@@ -44,18 +44,17 @@ $(document).ready(function() {
 		$('.popup-overlay').fadeOut();
 		$('.popup').fadeOut();
 		enableScroll();
-		// setTimeout(enableScroll, 800);
 	});
 
-	$('a.scroll-to').on('click', function(e){
-		let anchor = $(this).attr('href');
+	$('a.scroll-to').click(function(e){
 		e.preventDefault();
-		enableScroll();
+		let anchor = $(this).attr('href');
 		$('.hamburger--vortex').removeClass('is-active');
 		$('.header__nav').removeClass('header__nav-active');
 		$('html, body').stop().animate({
 			scrollTop: $(anchor).offset().top
 		}, 800);
+		enableScroll();
 	});
 }); 
 

@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
 * {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -1534,14 +1527,14 @@ a {
     }
 
     .popup__subtitle {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .popup__form {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .form__button {
-        font-size: 10px;
+        font-size: 12px;
     }
 }
